@@ -1,0 +1,127 @@
+* {
+    font-weight: 100;
+    box-sizing: border-box;
+}
+
+/* Dashboard */
+.form-white.input-group>.form-control:focus {
+    border-color: #fff;
+    box-shadow: inset 0 0 0 1px #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.logo-game {
+    color: transparent;
+    width: 4rem;
+}
+
+.login-button {
+    color: #fff;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.navbar-toggler {
+    margin-left: 9em;
+}
+
+.navbar>.container,
+.navbar>.container-fluid,
+.navbar>.container-lg,
+.navbar>.container-md,
+.navbar>.container-sm,
+.navbar>.container-xl,
+.navbar>.container-xxl {
+    display: unset;
+}
+
+/* content index */
+.bg-content-fluid {
+    background-image: url(./asset/img/bg5.jpg);
+    background-size: cover; /* Đảm bảo hình ảnh vừa với kích thước của container */
+    background-position: center; /* Đặt hình ảnh ở giữa container */
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -1;
+    animation: imageRotation 200s infinite;
+}
+@keyframes imageRotation {
+    0% {  background-image: url(./asset/img/bg1.jpg); }
+    25% {  background-image: url(./asset/img/bg2.jpg); }
+    50% {  background-image: url(./asset/img/bg5.png);}
+    75% {  background-image: url(./asset/img/bg3.jpg); }
+    100% {  background-image: url(./asset/img/bg.jpg); }
+  }
+.card{
+    width: 80%;
+    height: fit-content;
+    position: relative;
+    background-color: rgba(35,39,52,var(--tw-bg-opacity));
+    margin-top: 1rem;
+    min-width: 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0 1px rgba(55,65,81,.6);
+    padding: 1rem;
+    color: #fff;
+    margin: 50px auto;
+}
+.p-4 {
+    padding: 1rem;
+}
+.text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+@media (min-width: 768px) {
+    * {
+        font-weight: 500;
+    }
+
+    /* Dashboard */
+    .navbar>.container,
+    .navbar>.container-fluid,
+    .navbar>.container-lg,
+    .navbar>.container-md,
+    .navbar>.container-sm,
+    .navbar>.container-xl,
+    .navbar>.container-xxl {
+        display: flex;
+    }
+
+    .fixed-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .logo-game {
+        color: transparent;
+        width: 7rem;
+        margin-left: 12em;
+    }
+
+    .navbar-nav .nav-item {
+        padding: 0 20px;
+    }
+
+    .icon-game-nav {
+        margin-right: 10em;
+    }
+
+    /* content index */
+
+}
