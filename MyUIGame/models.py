@@ -8,9 +8,11 @@ class Attribute(models.Model):
     name = models.CharField(max_length=255)
 # Create Areas model
 
+
 class Territory(models.Model):
     name = models.CharField(max_length=255)
-        
+    description = models.TextField(blank=True)
+    image = models.CharField(max_length=255, null=True)
 # Create Genders model
 
 
@@ -22,6 +24,8 @@ class Gender(models.Model):
 
 class Skill(models.Model):
     name = models.CharField(max_length=255)
+    description = models.TextField(blank=True)
+    image = models.CharField(max_length=255, null=True)
 
 # create Weapone_type model
 
@@ -36,6 +40,10 @@ class Weapone(models.Model):
     name = models.CharField(max_length=255)
     weapone_type = models.ForeignKey(
         "Weapone_type", blank=True, null=True, on_delete=models.CASCADE)
+    description = models.TextField(blank=True)
+    starts = models.IntegerField(blank=True, default=0)
+    substats = models.CharField(max_length=255,null=True)
+    image = models.CharField(max_length=255,null=True)
 # Create  Figures model
 
 
