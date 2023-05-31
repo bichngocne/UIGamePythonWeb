@@ -1,0 +1,32 @@
+{% load static %}
+{% include 'head.html' %}
+{% include 'dashboard.html' %}
+<div class="container-fluid bg-dark">
+    <div class="content">
+        <div class="bg-figure-fluid bg-dark">
+            <video autoplay muted loop id="bg-video">
+                <source src="{% static 'asset/img/Yae2_Shopgenshin24h.mp4' %}" type="video/mp4">
+              </video>
+        </div>
+        {% for attribute in attributes %}
+        <div class="card">
+            <h2 class="mb-6 text-2xl font-semibold text-gray-200">{{ attribute.name }}</h2>
+            <div class="flex flex-wrap justify-center">
+                {% for figure in figures %}
+                {% if figure.attribute.id == attribute.id %}
+                <a href="" class="item-figure">
+                    <div class="group relative m-1 mb-1 block overflow-hidden">
+                        <img src="{% static 'asset/img/' %}{{ figure.image  }}" alt="{{ figure.name  }}"
+                            class="img-fluid">
+                    </div>
+                    <span class="text-center figure-name text-xs w-24">{{ figure.name }}</span>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% include 'footer.html' %}
+
