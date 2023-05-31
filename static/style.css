@@ -68,12 +68,14 @@
     animation: imageRotation 60s infinite;
 }
 
-.bg-weapon-fluid {
-    background-image: url(./asset/img/kiem2.png);
+
+.bg-figure-fluid {
     background-size: cover;
     background-position: center;
-    height: 500px; /* Chiều cao mới */
-    width: 800px; /* Chiều rộng mới */
+    height: 180px;
+    /* Chiều cao mới */
+    width: 100%;
+    /* Chiều rộng mới */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,49 +83,36 @@
     z-index: -99;
     margin: 50px auto;
 }
-.bg-figure-fluid {
-    background-size: cover;
-    background-position: center;
-    height: 500px; /* Chiều cao mới */
-    width: 100%; /* Chiều rộng mới */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    z-index: -99;
-    margin: 50px auto;
-  }
-  
-  #bg-video {
+
+#bg-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+    height: 300px;
+}
+
 
 
 @keyframes imageRotation {
     0% {
-        background-image: url(./asset/img/bg1.jpg);
+        background-image: url(./asset/img/bg.jpg);
     }
 
     25% {
-        background-image: url(./asset/img/bg2.jpg);
-    }
-
-    50% {
-        background-image: url(./asset/img/bg5.png);
-    }
-
-    75% {
         background-image: url(./asset/img/bg3.jpg);
     }
 
+    50% {
+        background-image: url(./asset/img/bg2.jpg);
+    }
+
+    75% {
+        background-image: url(./asset/img/bg1.jpg);
+    }
+
     100% {
-        background-image: url(./asset/img/bg.jpg);
+        background-image: url(./asset/img/bg5.png);
     }
 }
 
@@ -206,8 +195,17 @@
 
 a {
     text-decoration: none;
+    color: #fff;
 }
+/* figure detail */
+.card-detail{
+    background-color: unset;
+    border: unset;
+}
+.avatar{
+    padding: 20px;
 
+}
 @media (min-width: 768px) {
     * {
         font-weight: 500;
@@ -252,4 +250,28 @@ a {
         margin: 0 10px;
     }
 
+    .bg-weapon-fluid {
+        background-image: url(./asset/img/kiem2.png);
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        width: 900px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        z-index: -99;
+        margin: 50px auto;
+    }
+
+    .bg-figure-fluid {
+        height: 300px !important;
+        /* Chiều cao mới */
+    }
+
+    #bg-video {
+        object-fit: cover;
+        height: 100%;
+        top: 100px;
+    }
 }

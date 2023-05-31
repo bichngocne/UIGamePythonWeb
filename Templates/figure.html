@@ -14,7 +14,7 @@
             <div class="flex flex-wrap justify-center">
                 {% for figure in figures %}
                 {% if figure.attribute.id == attribute.id %}
-                <a href="" class="item-figure">
+                <a href="/figure/{{ figure.id }}" class="item-figure">
                     <div class="group relative m-1 mb-1 block overflow-hidden">
                         <img src="{% static 'asset/img/' %}{{ figure.image  }}" alt="{{ figure.name  }}"
                             class="img-fluid">
