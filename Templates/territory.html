@@ -1,0 +1,34 @@
+{% load static %}
+{% include 'head.html' %}
+{% include 'dashboard.html' %}
+<div class="container-fluid bg-dark">
+    <div class="content">
+        <div class="bg-figure-fluid bg-dark">
+            <video autoplay muted loop id="bg-video">
+                <source src="{% static 'asset/img/BossRaiden_Shopgenshin24h.mp4' %}" type="video/mp4">
+              </video>
+        </div>
+        {% for territory in territories %}
+        <div class="card">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="flex flex-wrap justify-center">
+                        <h2 class="mb-6 text-2xl font-semibold text-gray-200">{{ territory.name }}</h2>
+                        <a href="" class="item-figure">
+                            <div class="group relative m-1 mb-1 block overflow-hidden">
+                                <img src="{% static 'asset/img/' %}{{ territory.image  }}" alt="{{ territory.name  }}"
+                                    class="img-fluid">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <p>{{ territory.description }}</p>
+                </div>
+            </div>
+            
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% include 'footer.html' %}
