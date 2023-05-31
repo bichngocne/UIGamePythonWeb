@@ -1,0 +1,246 @@
+* {
+    font-weight: 100;
+    box-sizing: border-box;
+}
+
+/* Dashboard */
+.form-white.input-group>.form-control:focus {
+    border-color: #fff;
+    box-shadow: inset 0 0 0 1px #fff;
+}
+
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.logo-game {
+    color: transparent;
+    width: 4rem;
+}
+
+.login-button {
+    color: #fff;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.navbar-toggler {
+    margin-left: 9em;
+}
+
+.navbar>.container,
+.navbar>.container-fluid,
+.navbar>.container-lg,
+.navbar>.container-md,
+.navbar>.container-sm,
+.navbar>.container-xl,
+.navbar>.container-xxl {
+    display: unset;
+}
+
+/* content index */
+.bg-content-fluid {
+    background-image: url(./asset/img/bg5.jpg);
+    background-size: cover;
+    /* Đảm bảo hình ảnh vừa với kích thước của container */
+    background-position: center;
+    /* Đặt hình ảnh ở giữa container */
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -99;
+    animation: imageRotation 60s infinite;
+}
+
+.bg-weapon-fluid {
+    background-image: url(./asset/img/kiem2.png);
+    background-size: cover;
+    background-position: center;
+    height: 500px; /* Chiều cao mới */
+    width: 800px; /* Chiều rộng mới */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -99;
+    margin: 50px auto;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    padding: 8em 1em 0;
+
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: left 0s .75s;
+}
+
+@keyframes imageRotation {
+    0% {
+        background-image: url(./asset/img/bg1.jpg);
+    }
+
+    25% {
+        background-image: url(./asset/img/bg2.jpg);
+    }
+
+    50% {
+        background-image: url(./asset/img/bg5.png);
+    }
+
+    75% {
+        background-image: url(./asset/img/bg3.jpg);
+    }
+
+    100% {
+        background-image: url(./asset/img/bg.jpg);
+    }
+}
+
+.flex-wrap {
+    display: flex;
+}
+
+.text-xs {
+    font-size: .75rem;
+    line-height: 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex {
+    display: flex;
+}
+
+.w-24 {
+    width: 6rem;
+}
+
+.figure-name {
+    display: inline-block;
+}
+
+
+.card {
+    position: relative;
+    background-color: rgba(35, 39, 52, var(--tw-bg-opacity));
+    margin-top: 1rem;
+    min-width: 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0 1px rgba(55, 65, 81, .6);
+    padding: 1rem;
+    color: #fff;
+    margin: 50px auto;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #232734;
+    margin-bottom: 0 !important;
+}
+
+.item-figure {
+    margin: 1%;
+    flex-wrap: wrap;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex {
+    display: flex;
+}
+
+/* footer */
+.card-bottom {
+    margin-bottom: 0 !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    * {
+        font-weight: 500;
+    }
+
+    /* Dashboard */
+    .navbar>.container,
+    .navbar>.container-fluid,
+    .navbar>.container-lg,
+    .navbar>.container-md,
+    .navbar>.container-sm,
+    .navbar>.container-xl,
+    .navbar>.container-xxl {
+        display: flex;
+    }
+
+    .logo-game {
+        color: transparent;
+        width: 7rem;
+        margin-left: 12em;
+    }
+
+    .navbar-nav .nav-item {
+        padding: 0 20px;
+    }
+
+    .icon-game-nav {
+        margin-right: 10em;
+    }
+
+    /* content index */
+    .bg-content-fluid {
+        height: 800px;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .item-figure {
+        width: unset;
+        margin: 0 10px;
+    }
+
+}

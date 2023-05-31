@@ -1,0 +1,40 @@
+{% load static %}
+{% include 'head.html' %}
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-navbar">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="#">
+                <i class="fab fa-github fa-2x mx-3 ps-1"><img src="{% static 'asset/img/logo.png' %}" class="logo-game"
+                        alt="Logo"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link"  href="/index" class="btn-home">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="" class="btn-figure">Nhân Vật</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/weapons" class="btn-weapon">Vũ Khí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="" class="btn-territory">Khu Vực</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav d-flex flex-row icon-game-nav">
+                    <img src="{% static 'asset/img/genshin.png' %}" class="photo-game" alt="Logo">
+                    <form action="register" method="post">
+                        {% csrf_token %}
+                        <button class="bg-dark login-button"><span class=" me-5 ms-2 name-game">Genshin Impact</span></button>
+                    </form>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
