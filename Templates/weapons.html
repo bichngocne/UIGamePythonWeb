@@ -3,20 +3,20 @@
 {% include 'dashboard.html' %}
 <div class="container-fluid bg-dark">
     <div class="content">
-        <div class="bg-content-fluid bg-dark">
+        <div class="bg-weapon-fluid bg-dark">
         </div>
-        {% for territory in territories %}
+        {% for weapon_type in weapon_types %}
         <div class="card">
-            <h2 class="mb-6 text-2xl font-semibold text-gray-200">{{ territory.name }}</h2>
+            <h2 class="mb-6 text-2xl font-semibold text-gray-200">{{ weapon_type.name }}</h2>
             <div class="flex flex-wrap justify-center">
-                {% for figure in figures %}
-                {% if figure.territory.id == territory.id %}
+                {% for weapon in weapons %}
+                {% if weapon.weapone_type.id == weapon_type.id %}
                 <a href="" class="item-figure">
                     <div class="group relative m-1 mb-1 block overflow-hidden">
-                        <img src="{% static 'asset/img/' %}{{ figure.image  }}" alt="{{ figure.name  }}"
+                        <img src="{% static 'asset/img/' %}{{ weapon.image  }}" alt="{{ weapon.name  }}"
                             class="img-fluid">
                     </div>
-                    <span class="text-center figure-name text-xs w-24">{{ figure.name }}</span>
+                    <span class="text-center figure-name text-xs w-24">{{ weapon.name }}</span>
                 </a>
                 {% endif %}
                 {% endfor %}
