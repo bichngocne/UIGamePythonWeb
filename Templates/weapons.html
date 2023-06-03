@@ -11,7 +11,7 @@
             <div class="flex flex-wrap justify-center">
                 {% for weapon in weapons %}
                 {% if weapon.weapone_type.id == weapon_type.id %}
-                <a href="" class="item-figure">
+                <a href="/weapon/{{ weapon.id }}"class="item-figure">
                     <div class="group relative m-1 mb-1 block overflow-hidden">
                         <img src="{% static 'asset/img/' %}{{ weapon.image  }}" alt="{{ weapon.name  }}"
                             class="img-fluid">
@@ -24,5 +24,4 @@
         </div>
         {% endfor %}
     </div>
-</div>
 {% include 'footer.html' %}

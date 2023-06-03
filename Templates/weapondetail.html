@@ -1,0 +1,30 @@
+{% load static %}
+{% include 'head.html' %}
+{% include 'dashboard.html' %}
+<div class="container-fluid bg-dark">
+    <div class="content">
+        <div class="bg-content-fluid bg-dark">
+           
+        </div>
+        <div class="card card-detail">
+            <div class="row">
+                <div class="col-md-5">
+                  <div class="flex flex-wrap justify-center">
+                    <div class="item-figure">
+                      <div class="group relative m-1 mb-1 block overflow-hidden">
+                        <img src="{% static 'asset/img/' %}{{weapon.image}}" class="avatar" alt="{{weapon.name}}" class="img-fluid">
+                      </div>
+                      <h2 class="text-center text-gray-200">{{weapon.name}}</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <span><h5><b>Mô tả</b></h5>{{weapon.description}}</span><br>
+                  <span>Loại vũ khí: {{weapon.weapon_type.name}}</span><br>
+                  <span>Chỉ số phụ: {{weapon.substats}}</span><br>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+{% include 'footer.html' %}

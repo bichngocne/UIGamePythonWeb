@@ -54,7 +54,7 @@
 
 /* content index */
 .bg-content-fluid {
-    background-image: url(./asset/img/bg5.jpg);
+    background-image: url(./asset/img/bg5.png);
     background-size: cover;
     /* Đảm bảo hình ảnh vừa với kích thước của container */
     background-position: center;

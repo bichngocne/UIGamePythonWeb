@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.models import User, auth
 from .models import Figure as figure_model
 from .models import Weapone as weapon_model
 from .models import Weapone_type as weapon_type_model
@@ -37,4 +38,18 @@ def get_figure_detail(request,id):
         gender = figure.gender
         territory = figure.territory
     return render(request, 'figuredetail.html',{'figure':figure,'pk':id})
-    
+
+def get_weapon_detail(request,id):
+    weapon_detail = weapon_model.objects.select_related('weapone_type').filter(id=id)
+    # Kiểm tra xem đối tượng Figure có tồn tại không
+    if weapon_detail.exists():
+        weapon = weapon_detail.first()
+    return render(request, 'weapondetail.html',{'weapon':weapon,'pk':id})
+
+def login(request):
+    return render(request,'login.html');
+
+
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
